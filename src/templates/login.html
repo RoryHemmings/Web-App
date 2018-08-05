@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
     <div id="login-form">
-        <form>
-            <input id="email" type="text">
-            <input id="password" type="password">
+        <form action="/login" method="post">
+            <input id="email" type="text" name="email">
+            <input id="password" type="password" name="password">
 
             <input id="submit-button" type="submit">
         </form>
