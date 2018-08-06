@@ -1,9 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container register-page-form">
     <form id="register-form" action="/auth/register" method="post">
-        <input id="email" type="text" name="email">
-        <input id="password" type="password" name="password">
-
-        <input id="submit-button" type="submit">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                   placeholder="Enter email" name="email">
+            <small id="emailHelp" class="form-text text-muted">example@website.com</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" class="form-control" type="password" name="password" placeholder="Password">
+        </div>
+        <button id="submit-button" class="btn btn-primary" type="submit">Register</button>
     </form>
+</div>
 {% endblock %}

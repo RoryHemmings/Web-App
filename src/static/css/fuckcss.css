@@ -3,10 +3,10 @@ body {
     passing: 0;
 }
 
-#login-form {
+#login-form, #register-form {
     margin-top: 25px;
 }
 
-.login-page-form {
+.login-page-form, .register-page-form {
     width: 480px;
 }

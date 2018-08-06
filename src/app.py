@@ -9,9 +9,9 @@ app = Flask(__name__)
 app.secret_key = "urmumhavetriplegay"
 
 
-@app.route('/')
-def home_page():
-    render_template('home.html')
+# @app.route('/')
+# def home_page():
+#     render_template('home.html')
 
 
 # function called if link is accessed at specified endpoint
