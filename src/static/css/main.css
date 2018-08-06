@@ -6,3 +6,11 @@
     padding: 15px;
 }
 
+#register-form {
+    text-align: center;
+    border: 1px solid #000000;
+
+    margin-top: 25px;
+    padding: 15px;
+}
+
