@@ -21,23 +21,19 @@
     </div>
 </nav>
 
-<div class="container login-page-form">
-    <form id="login-form" action="/auth/login" method="post">
+<div class="container">
+    <form id="new_blog" action="/blogs/new" method="post">
         <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                   placeholder="Enter email" name="email">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title"
+                   placeholder="Enter title" name="title">
             <small id="emailHelp" class="form-text text-muted">example@website.com</small>
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
-            <input id="password" class="form-control" type="password" name="password" placeholder="Password">
+            <label for="description">Description</label>
+            <input id="description" class="form-control" type="text" name="description" placeholder="Enter Description">
         </div>
-        <button id="submit-button" class="btn btn-outline-primary" type="submit">Login</button>
-        <div style="display: flex; margin-top: 5px">
-            <small style="margin: 0 4px 0 0; font-size: 16px" id="change" class="form-text text-muted">or</small>
-            <a href="register" style="">Sign Up</a>
-        </div>
+        <button id="submit-button" class="btn btn-primary" type="submit">Create Blog</button>
     </form>
 </div>
 {% endblock %}

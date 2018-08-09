@@ -21,5 +21,12 @@
     </div>
 </nav>
 
-<h1> Hello {{ email }} </h1>
+<div class="container">
+    <h2 style="padding: 25px 0 10px 0;">{{ email }}'s blogs</h2>
+    {% for blog in blogs %}
+        <hr>
+        <h3><a href="/posts/{{ blog._id }}"> {{ blog.title }} </a></h3>
+        <small id="description" class="form-text text-muted"> {{ blog.description }} </small>
+    {% endfor %}
+</div>
 {% endblock %}
