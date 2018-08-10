@@ -1,5 +1,4 @@
 create nickname system
-create new blog button
 create search user feature
-create feed
 add images
+add comments

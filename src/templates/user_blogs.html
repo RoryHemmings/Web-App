@@ -28,5 +28,7 @@
         <h3><a href="/posts/{{ blog._id }}"> {{ blog.title }} </a></h3>
         <small id="description" class="form-text text-muted"> {{ blog.description }} </small>
     {% endfor %}
+    <hr>
+    <a href="/blogs/new"><button style="margin: 25px 0 0 0;" class="btn btn-primary">New Blog </button></a>
 </div>
 {% endblock %}
