@@ -1,4 +1,3 @@
-create nickname system
+create home page
 create search user feature
-add images
 add comments

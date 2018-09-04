@@ -22,13 +22,14 @@
 </nav>
 
 <div class="container">
-    <h2 style="padding: 25px 0 10px 0;">{{ email }}'s blogs</h2>
+    <h2 style="padding: 25px 0 10px 0;">{{ nickname }}</h2>
+    <small class="form-text text-muted"> aka {{ email }}'s blogs </small>
     {% for blog in blogs %}
         <hr>
         <h3><a href="/posts/{{ blog._id }}"> {{ blog.title }} </a></h3>
         <small id="description" class="form-text text-muted"> {{ blog.description }} </small>
     {% endfor %}
     <hr>
-    <a href="/blogs/new"><button style="margin: 25px 0 0 0;" class="btn btn-primary">New Blog </button></a>
+    <a href="/blogs/new"><button style="margin: 25px 0 0 0;" class="btn btn-primary"> New Blog </button></a>
 </div>
 {% endblock %}

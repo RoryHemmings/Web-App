@@ -27,7 +27,8 @@
         {% for post in posts %}
             <hr>
             <h3> {{ post.title }} </h3>
-            <small id="author" class="form-text text-muted"> {{ post.author }} </small>
+            <small id="nickname" class="form-text"> {{ nickname }} </small>
+            <small id="author" class="form-text text-muted"> aka {{ post.author }} </small>
             <small id="date" class="form-text text-muted"> {{ post.date }} </small>
             <p>{{ post.content }}</p>
         {% endfor %}

@@ -8,7 +8,7 @@ __author__ = 'Rory'
 from flask import Flask, render_template, request, session, make_response
 
 app = Flask(__name__)
-app.secret_key = "urmumhavetriplegay"
+app.secret_key = "itsliterallyimpossibletobreakthissupersecurekey"
 
 
 @app.route('/')
@@ -48,8 +48,9 @@ def login_user():
 def register_user():
     email = request.form['email']
     password = request.form['password']
+    nickname = request.form['nickname']
 
-    User.register(email, password)
+    User.register(email, password, nickname)
 
     return render_template('profile.html', email=session['email'])
 
@@ -63,7 +64,7 @@ def user_blogs(user_id=None):
         user = User.get_user_by_email(session['email'])
     blogs = user.get_blogs()
 
-    return render_template("user_blogs.html", blogs=blogs, email=user.email)
+    return render_template("user_blogs.html", blogs=blogs, email=user.email, nickname=user.nickname)
 
 
 @app.route('/blogs/new', methods=['POST', 'GET'])
@@ -86,7 +87,8 @@ def blog_posts(blog_id):
     blog = Blog.get_from_mongo(blog_id)
     posts = blog.get_posts()
 
-    return render_template("posts.html", posts=posts, blog_title=blog.title, blog_id=blog._id)
+    return render_template("posts.html", posts=posts, blog_title=blog.title, blog_id=blog._id,
+                           nickname=User.get_user_by_id(Blog.get_from_mongo(blog_id).author_id).nickname)
 
 
 @app.route('/posts/<string:blog_id>/new', methods=['POST', 'GET'])
